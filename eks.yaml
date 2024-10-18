@@ -5,9 +5,11 @@ metadata:
   name: eks-spot-cluster
   region: us-east-1
 
+availabilityZones: ["us-east-1a", "us-east-1b"]
+
 managedNodeGroups: # this is also completely managed by AWS
   - name: spot
     instanceType: t3.medium
     # your K8 node can be anytime taken back by AWS
     spot: true
-    desiredCapacity: 3
+    desiredCapacity: 2
